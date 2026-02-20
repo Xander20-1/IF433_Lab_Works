@@ -1,4 +1,5 @@
 package oop_00000117690_LouisAlexanderPutraAndreas.week03
+import java.util.Scanner
 
 class Weapon(val name: String) {
     var damage: Int = 0
@@ -22,4 +23,16 @@ class Weapon(val name: String) {
                 else -> "Common"
             }
         }
+}
+
+fun main(){
+    val scanner = Scanner(System.`in`)
+    println("=== Weapon Testing ===")
+    val senjata = Weapon("pedang")
+
+    print("Tentukan nilai damage: ")
+    var inputDamage = scanner.nextInt()
+
+    senjata.damage = inputDamage
+
 }
