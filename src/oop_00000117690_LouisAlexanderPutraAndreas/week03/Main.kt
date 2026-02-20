@@ -8,4 +8,13 @@ fun main() {
     e.increasePerformance()
 
     println("Pajak yang harus dibayar: ${e.tax}")
+
+    println("\n")
+
+    val p1 = Player("Lou")
+
+    //p1.xp
+    p1.addXp(50)
+    println("Level ${p1.level}")
+    p1.addXp(60)
 }
