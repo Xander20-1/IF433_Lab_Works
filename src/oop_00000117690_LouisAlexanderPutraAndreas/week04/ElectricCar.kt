@@ -6,3 +6,11 @@ open class ElectricCar(brand: String, numberOfDoors: Int, var batteryCapacity: I
         println("$brand berakselerasi dalam sunyi. Kapasitas baterai: $batteryCapacity%.")
     }
 }
+
+fun main() {
+    println("--- Electric Car Test ---")
+    val mobil = ElectricCar(brand="Mercedes", numberOfDoors=2, batteryCapacity=100)
+    mobil.accelerate()
+    mobil.honk()
+    mobil.accelerate()
+}
