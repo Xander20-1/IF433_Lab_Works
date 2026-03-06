@@ -8,5 +8,15 @@ fun main() {
 
     for (pembayaran in tipePembayaran) {
         pembayaran.processPayment(amount= 75000.0)
+
+        when (pembayaran) {
+            is Ewallet -> {
+                pembayaran.topUp(amount = 50000.0)
+                pembayaran.processPayment(amount= 75000.0)
+            }
+            is CreditCard -> {
+                pembayaran.processPayment(amount= 75000.0)
+            }
+        }
     }
 }
