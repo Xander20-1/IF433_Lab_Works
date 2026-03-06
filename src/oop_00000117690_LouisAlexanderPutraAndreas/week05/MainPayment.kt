@@ -8,6 +8,5 @@ fun main() {
 
     for (pembayaran in tipePembayaran) {
         pembayaran.processPayment(amount= 75000.0)
-        println("-----------------------------")
     }
 }
