@@ -13,3 +13,10 @@ class MathHelper {
         return (3.14 * jariJari * jariJari)
     }
 }
+
+fun main() {
+    val luas = MathHelper()
+    println("Luas Persegi: ${luas.hitungLuas(sisi= 2)} cm")
+    println("Luas Persegi Panjang: ${luas.hitungLuas(20, 10)} cm")
+    println("Luas Lingkaran: ${luas.hitungLuas(10.0)} cm")
+}
