@@ -17,4 +17,15 @@ class SmartHomeHub(){
         }
     }
 
+    fun activateSecurityMode(){
+        println("Menyalakan Security Mode...")
+        for (device in devices){
+            if (device is Recordable){
+                device.startRecord()
+            }else if (device is SmartSpeaker){
+                device.playMusic("Sirine Peringatan")
+            }
+        }
+    }
+
 }
