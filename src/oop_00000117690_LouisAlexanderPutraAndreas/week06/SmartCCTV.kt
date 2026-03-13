@@ -9,7 +9,7 @@ class SmartCCTV(override val id : String, override var name : String) : SmartDev
     override fun stopRecord() {
         println("SmartCCTV $name berhenti merekam.")
     }
-    override fun turnOn{
+    override fun turnOn(){
         println("SmartCCTV $name turned on")
         startRecord()
     }
