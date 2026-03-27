@@ -4,13 +4,13 @@ fun main(){
     GameManager.startGame()
     GameManager.startGame()
 
-    println(ItemRarity.LEGENDARY)
-
+    println("Rarity dari item Legendary: ${ItemRarity.LEGENDARY.dropChance}")
     val senjata1 = Weapon.forgeStarterSword()
+
     println(" Detail Senjata 1:\n" +
             "Nama Senjata: ${senjata1.item.name}\n" +
             "Damage Senjata: ${senjata1.item.damage}\n" +
-            "Rariry Senjata: ${senjata1.item.rarity}\n" +
+            "Rarity Senjata: ${senjata1.item.rarity}\n" +
             "Durability Senjata: ${senjata1.durability}")
 
     println("=== SIMULASI ===")
