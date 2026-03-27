@@ -32,7 +32,9 @@ fun main() {
 
     // ERROR: 'when' expression must be exhaustive
     val uiMessage = when(response) {
+        is ApiResponse.Loading -> "Tampilkan Spinner"
         is ApiResponse.Success -> "Tampilkan: ${response.data}"
         is ApiResponse.Error -> "Munculkan alert: ${response.message}"
     }
+    println(uiMessage)
 }
