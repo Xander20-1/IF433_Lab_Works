@@ -1,0 +1,3 @@
+package oop_00000117690_LouisAlexanderPutraAndreas.week07
+
+class RegularUser(val name: String, val age: Int)
