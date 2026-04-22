@@ -15,15 +15,25 @@ class ApiParser {
         return when (type) {
             "ELECTRONIC" -> {
                 val warranty = rawJson["warranty"] as? Int ?: 12
-
                 Product.Electronic(id = id, name = name, warrantyMonths = warranty)
             }
             "CLOTHING" -> {
                 val size = rawJson["size"] as? String ?: "All Size"
-
                 Product.Clothing(id = id, name = name, size = size)
             }
             else -> null
         }
+    }
+
+    fun checkout(product: Product) {
+        val id = when (product) {
+            is Product.Electronic -> product.id
+            is Product.Clothing -> product.id
+        }
+
+        // Panggil Java method
+        val transactionResult = JavaPaymentService.processPayment(id)
+
+        println("Hasil Transaksi: ${transactionResult!!}")
     }
 }
