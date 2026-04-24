@@ -18,6 +18,12 @@ fun main() {
     val topPerformersString = winningTrades
         .sortedByDescending { it.roe }
         .map { "WIN [${it.pair} - ${it.position}]: +${it.roe}% ROE (Lev: ${it.leverage}x)"}
-
     topPerformersString.forEach {println(it)}
+
+    // Analisis Koin Loss
+    val worstPerformersString = losingTrades
+        .sortedBy { it.roe }
+        .map { "LOSS [${it.pair} - ${it.position}]: ${it.roe}% ROE (Lev: ${it.leverage}x)" }
+    println("")
+    worstPerformersString.forEach {println(it)}
 }
