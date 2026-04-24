@@ -17,12 +17,12 @@ fun main() {
     // Analisis Koin profit tertinggi
     val topPerformersString = winningTrades
         .sortedByDescending { it.roe }
-        .map { "WIN [${it.pair} - ${it.position}]: +${it.roe}% ROE (Lev: ${it.leverage}x) STATUS: ${it.status}" }
+        .map { "WIN [${it.pair} - ${it.position}]: +${it.roe}% ROE (Lev: ${it.leverage}x)" }
 
     // Analisis Koin Loss
     val worstPerformersString = losingTrades
         .sortedBy { it.roe }
-        .map { "LOSS [${it.pair} - ${it.position}]: ${it.roe}% ROE (Lev: ${it.leverage}x) STATUS: ${it.status}" }
+        .map { "LOSS [${it.pair} - ${it.position}]: ${it.roe}% ROE (Lev: ${it.leverage}x)" }
 
     // Ekstrasi Unik
     val uniquePairs = tradeHistory
