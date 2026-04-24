@@ -33,4 +33,10 @@ fun main() {
     // Cetak semua baris profit
     println("Semua Baris Profit")
     topPerformersString.forEach { println(it) }
+
+    // Cetak baris loss
+    println("\nSemua Baris Loss")
+    worstPerformersString.forEach { println(it) }
+    println("\nUnique Pairs")
+    println(uniquePairs)
 }
