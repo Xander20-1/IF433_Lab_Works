@@ -10,19 +10,19 @@ fun main() {
         TradeLog(pair = "BTCUSDT", position = "LONG", leverage = 50, roe = -100.0, status = "CLOSED")
     )
 
-    val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
+    val closedTrades = tradeHistory.filter { it.status == "CLOSED" } // Pasti tidak ada data dengan status "OPEN"
     val winningTrades = closedTrades.filter { it.roe > 0 }
     val losingTrades = closedTrades.filter { it.roe <= 0 }
 
     // Analisis Koin profit tertinggi
     val topPerformersString = winningTrades
         .sortedByDescending { it.roe }
-        .map { "WIN [${it.pair} - ${it.position}]: +${it.roe}% ROE (Lev: ${it.leverage}x)"}
+        .map { "WIN [${it.pair} - ${it.position}]: +${it.roe}% ROE (Lev: ${it.leverage}x) STATUS: ${it.status}" }
 
     // Analisis Koin Loss
     val worstPerformersString = losingTrades
         .sortedBy { it.roe }
-        .map { "LOSS [${it.pair} - ${it.position}]: ${it.roe}% ROE (Lev: ${it.leverage}x)" }
+        .map { "LOSS [${it.pair} - ${it.position}]: ${it.roe}% ROE (Lev: ${it.leverage}x) STATUS: ${it.status}" }
 
     // Ekstrasi Unik
     val uniquePairs = tradeHistory
