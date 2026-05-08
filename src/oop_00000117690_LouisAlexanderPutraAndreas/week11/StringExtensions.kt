@@ -10,7 +10,7 @@ fun String.repeatTimes(n: Int) : String {
     return this.repeat(n)
 }
 
-fun String?.isNullorEmptyCustom() : Boolean {
+fun String?.isNullOrEmptyCustom() : Boolean {
     // 'this' bisa bernilai null, jadi harus ditangani
     return this == null || this.isEmpty()
 }
