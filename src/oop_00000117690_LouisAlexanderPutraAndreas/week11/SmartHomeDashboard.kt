@@ -55,7 +55,7 @@ fun main() {
 
     with(homeDevices) {
 
-        println("=== RINGKASAN SMART HOME ===")
+        println("\n=== RINGKASAN SMART HOME ===")
         println("Jumlah perangkat: ${this.size}")
 
     }
@@ -64,4 +64,10 @@ fun main() {
         sumOf { it.powerLoad }
     }
     println("Total daya perangkat: $totalPower Watt")
+
+    println("\n=== HASIL DIAGNOSA SEMUA PERANGKAT ===")
+
+    homeDevices.forEach {
+        println(it.diagnose())
+    }
 }
