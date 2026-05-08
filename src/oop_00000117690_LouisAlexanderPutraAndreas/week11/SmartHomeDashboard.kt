@@ -12,4 +12,15 @@ fun main() {
     }.also{
         homeDevices.add(it)
     }
+
+    val camera = SmartDevice(
+        "Ezviz Outdoor",
+        "Camera"
+    ).apply {
+        isOnline = true
+        powerLoad = 5
+    }.also {
+        println("(LOG) Kamera terhubung")
+        homeDevices.add(it)
+    }
 }
