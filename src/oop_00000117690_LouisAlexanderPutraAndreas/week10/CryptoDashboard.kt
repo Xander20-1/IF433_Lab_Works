@@ -20,4 +20,9 @@ fun main() {
     txRepo.add(Transaction("TXN-001", 0.5))
     txRepo.add(Transaction("TXN-002", 2.0))
     txRepo.add(Transaction("TXN-003", 250.0))
+
+    println("\nDaftar Transaksi:")
+    txRepo.getAll().forEach { tx ->
+        println("- ID: ${tx.id} | Amount: ${tx.amount}")
+    }
 }
