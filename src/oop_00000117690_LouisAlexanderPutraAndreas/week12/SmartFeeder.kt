@@ -19,6 +19,8 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
 }
 
 fun main(){
+
+    println("=== SIMULASI PERTAMA ===")
     var currentKibbleStock = 50
 
     try {
@@ -35,6 +37,16 @@ fun main(){
         println(e.message)
     }finally {
         println("Siklus pengecekan dispenser pagi selesai!")
+    }
+
+    println("")
+    println("=== SIMULASI JADWAL MAKAN SORE ===")
+    runCatching {
+        dispenseKibble(
+            requestedGram = 30,
+            availableGram = 1000,
+            isJammed = false
+        )
     }
 }
 
