@@ -54,5 +54,7 @@ fun main(){
         println("Peringatan ke Pemilik: ${error.message}")
         println("Berikan chicken jerky secara manual")
     }
+
+    // Test sukses
 }
 
