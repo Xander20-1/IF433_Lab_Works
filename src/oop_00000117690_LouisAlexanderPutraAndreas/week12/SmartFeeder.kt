@@ -32,7 +32,9 @@ fun main(){
     }catch (e: FoodEmptyException){
         println(e.message)
     }catch (e: Exception){
-        println("Error!")
+        println(e.message)
+    }finally {
+        println("Siklus pengecekan dispenser pagi selesai!")
     }
 }
 
