@@ -91,6 +91,4 @@ fun main() {
     val loadedData = loadTrades("crypto_trades.csv")
 
     val totalPnl = loadedData.sumOf { it.pnl }
-
-    println("Total PnL bersih: $totalPnl")
 }
