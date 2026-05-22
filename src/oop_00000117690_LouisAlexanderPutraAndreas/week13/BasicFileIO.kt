@@ -4,7 +4,7 @@ import java.io.File
 
 fun main() {
     println("=== TEST WRITE TEXT ===")
-    val file = File("notes.txt")
+    val file = File("src/oop_00000117690_LouisAlexanderPutraAndreas.week13.notes.txt")
     file.writeText("Line 1: Insialisasi sistem.\n")
     println("File berhasil dibuat dan ditulis.")
 
