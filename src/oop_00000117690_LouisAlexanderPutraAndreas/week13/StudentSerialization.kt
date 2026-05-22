@@ -1,0 +1,10 @@
+package oop_00000117690_LouisAlexanderPutraAndreas.week13
+
+import java.io.File
+import java.io.FileNotFoundException
+
+data class Student(
+    val name: String,
+    val age: Int,
+    val gpa: Double
+)
