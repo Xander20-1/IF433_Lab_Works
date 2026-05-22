@@ -87,4 +87,10 @@ fun main() {
 
     println("Data trade berhasil disimpan.")
     println("Data korup berhasil ditambahkan untuk simulasi error.")
+
+    val loadedData = loadTrades("crypto_trades.csv")
+
+    val totalPnl = loadedData.sumOf { it.pnl }
+
+    println("Total PnL bersih: $totalPnl")
 }
